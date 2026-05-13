@@ -37,10 +37,10 @@ export default function Hero() {
     <section className="hero" id="intro">
       <div className="hero-meta">
         {[
-          ["Designer / 001", "Pau Veel"],
-          ["Discipline", "Visual · Brand · Product · Code"],
-          ["Years active", "2017 — present"],
-          ["Index", "01 / 05"],
+          ["Designer / 001", "Pau Vidal"],
+          ["Discipline", "UX/UI · Front-end · Data Viz"],
+          ["Years active", "2019 — present"],
+          ["Location", "Lleida, Cataluña"],
         ].map(([k, v]) => (
           <div className="hero-meta-item" key={k}>
             <span className="k">{k}</span>
@@ -75,8 +75,9 @@ export default function Hero() {
 
       <div className="hero-foot">
         <p className="tagline">
-          A designer who <em>writes the code</em>, draws the marks, and ships
-          the product. Studio of one. Quiet by default, loud when it earns it.
+          UX/UI designer who <em>writes the code</em>. Background in graphic
+          design, front-end development and data visualisation. Specialised in
+          mobile apps, technical interfaces and geospatial projects.
         </p>
         <div className="scroll">
           <span>Scroll · Selected Work</span>

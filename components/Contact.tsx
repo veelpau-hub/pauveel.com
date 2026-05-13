@@ -1,9 +1,9 @@
 const SOCIALS = [
-  { label: "Instagram",  href: "#" },
-  { label: "Are.na",     href: "#" },
-  { label: "Read.cv",    href: "#" },
-  { label: "GitHub",     href: "#" },
-  { label: "LinkedIn",   href: "#" },
+  { label: "LinkedIn",  href: "https://linkedin.com/in/pauveel" },
+  { label: "GitHub",    href: "#" },
+  { label: "Instagram", href: "#" },
+  { label: "Are.na",    href: "#" },
+  { label: "Read.cv",   href: "#" },
 ];
 
 export default function Contact() {
@@ -44,7 +44,7 @@ export default function Contact() {
 
       <footer className="colophon" id="colophon">
         <div>
-          Pau Veel © MMXXVI
+          Pau Vidal © MMXXVI
           <br />
           All rights reserved
         </div>

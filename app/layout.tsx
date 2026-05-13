@@ -33,14 +33,14 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Pau Veel — Not your average designer.",
+  title: "Pau Vidal — UX/UI Designer & Front-end Developer",
   description:
-    "Independent designer and front-end engineer based in Barcelona. Visual identity, product design, and code.",
+    "UX/UI Designer with a background in graphic design, front-end development and data visualisation. Based in Lleida. Specialised in mobile apps, technical interfaces and geospatial projects.",
   openGraph: {
-    title: "Pau Veel — Not your average designer.",
+    title: "Pau Vidal — UX/UI Designer & Front-end Developer",
     description:
-      "Independent designer and front-end engineer based in Barcelona.",
-    siteName: "Pau Veel",
+      "UX/UI Designer with a background in graphic design, front-end development and data visualisation. Based in Lleida.",
+    siteName: "Pau Vidal",
     locale: "en_US",
     type: "website",
   },

@@ -26,11 +26,11 @@ export default function TopBar() {
         <span>Available · MMXXVI</span>
       </div>
       <div className="tb-center">
-        Pau Veel{" "}
+        Pau Vidal{" "}
         <span style={{ opacity: 0.4, marginLeft: 8 }}>©</span>
       </div>
       <div className="tb-right">
-        <span>Barcelona</span>
+        <span>Lleida</span>
         <span style={{ opacity: 0.5 }}>/</span>
         <span style={{ fontVariantNumeric: "tabular-nums" }}>{time}</span>
       </div>

@@ -1,9 +1,9 @@
 const SKILLS = [
-  ["01", "Brand & Identity",  "Logotypes · Marks · Systems · Print"],
-  ["02", "Product & UX",      "Figma · Prototyping · Design Systems"],
-  ["03", "Visual Direction",  "Editorial · Layout · Type"],
-  ["04", "Code",              "HTML · CSS · JS · React · WebGL"],
-  ["05", "Motion",            "After Effects · Lottie · CSS / SVG"],
+  ["01", "UX/UI Design",       "Figma · Wireframing · Prototyping · User Research"],
+  ["02", "Front-end Dev",      "HTML · CSS · JS · React · D3.js"],
+  ["03", "Data & Geo",         "Mapbox GL JS · Python · Flask · Data Viz · APIs"],
+  ["04", "Brand & Motion",     "Adobe Suite · Illustrator · After Effects · Motion"],
+  ["05", "Product & Platform", "App Store · Google Play · Reskyt · Docker · Node.js"],
 ] as const;
 
 export default function About() {
@@ -13,36 +13,36 @@ export default function About() {
         <span className="num">03 / About</span>
         <h2 className="name">About.</h2>
         <span className="meta">
-          Designer, programmer,
+          Designer, developer,
           <br />
-          occasional typesetter.
+          occasional cartographer.
         </span>
       </div>
 
       <div className="about-grid">
         <p className="about-quote">
-          I make{" "}
-          <span className="it acc">considered</span>{" "}
-          work for people who care about the{" "}
-          <span className="it">details</span> nobody asks about.
+          I design the interface and <span className="it acc">write the code</span>{" "}
+          that makes it ship.
         </p>
 
         <div className="about-col">
           <p>
-            <strong>Pau Veel</strong> is an independent designer and front-end
-            engineer based in Barcelona. Trained as a graphic designer,
-            sharpened by ten years of shipping software.
+            <strong>Pau Vidal</strong> is a UX/UI designer and front-end
+            developer based in Lleida, Cataluña. Trained in graphic design at
+            the UOC, sharpened by years of shipping mobile apps and technical
+            interfaces.
           </p>
           <p>
-            The work sits between <strong>visual identity</strong>,{" "}
-            <strong>product design</strong>, and <strong>code</strong>. A logo
-            and the website it lives on. A design system and the React
-            components that render it. The poster and the print file. End to
-            end, one person, no handoffs.
+            At <strong>Reskyt</strong> he designs and builds mobile apps for
+            ecommerce brands — from wireframe to App Store. At{" "}
+            <strong>Anvie Studio</strong> he defines brand identity for early-stage
+            companies. Previously at <strong>VMLY&amp;R</strong>, creating digital
+            campaigns for Danone, Naturgy and Miravia.
           </p>
           <p>
-            Currently available for selected studio collaborations and a small
-            number of long-term partnerships. Previously: Forma, Caldera, Mota.
+            Side projects explore the edges: real-time maritime dashboards,
+            IoT sensor networks, GPS running trackers. The through-line is
+            always the same — design and code as one thing, not two.
           </p>
         </div>
 
