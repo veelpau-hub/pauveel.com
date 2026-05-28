@@ -1,87 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import { PROJECTS } from "@/lib/work";
 
-const PROJECTS = [
-  {
-    n: "01",
-    title: "Gyreo",
-    tags: "Dashboard · Maritime · Code",
-    year: "2026",
-    href: "https://github.com/veelpau-hub/dashboard_maritimo",
-    desc: "Maritime intelligence dashboard for the Bay of Cádiz. Live AIS vessel tracking via WebSocket, 7 hand-drawn D3.js panels (wind rose, Beaufort arc, wave height, solar arc, barometer), Copernicus Sentinel-1 SAR imagery, and tide forecasts from Puertos del Estado. Flask backend on Render.",
-    image: "/images/work/gyreo/cover.png",
-    folder: "gyreo",
-  },
-  {
-    n: "02",
-    title: "Ilervis",
-    tags: "Product · IoT · Science",
-    year: "2025",
-    href: "#",
-    desc: "Multi-module scientific platform: ESP32 weather stations feeding live D3.js dashboards, photogrammetry pipeline, Mars HiRISE imagery processing, and ADS-B aircraft tracking.",
-    image: undefined as string | undefined,
-    folder: "ilervis",
-  },
-  {
-    n: "03",
-    title: "VeelRun",
-    tags: "Mobile · GPS · PWA",
-    year: "2025",
-    href: "#",
-    desc: "GPS running tracker built as a PWA — installable on iOS and Android without the App Store. Live bearing to home, pace, split stats and distance. Dark minimal UI built for one hand. Live on Render.",
-    image: "/images/work/veelrun/cover.png",
-    folder: "veelrun",
-  },
-  {
-    n: "04",
-    title: "Anvie",
-    tags: "Branding · Identity · Studio",
-    year: "2022 – present",
-    href: "#",
-    desc: "Personal creative studio for early-stage brand identity. Visual language, naming, motion and web. Work spans editorial, identity systems and client brand launches.",
-    image: "/images/work/anvie/cover.webp",
-    folder: "anvie",
-  },
-  {
-    n: "05",
-    title: "The White Brig",
-    tags: "Branding · Hospitality · Identity",
-    year: "2022",
-    href: "#",
-    desc: "Brand identity for a hospitality venue — visual mark, typography, print collateral and digital assets. Developed through Anvie Studio.",
-    image: "/images/work/the-white-brig/cover.webp",
-    folder: "the-white-brig",
-  },
-  {
-    n: "06",
-    title: "Kingston Garden",
-    tags: "Branding · Identity · Print",
-    year: "2022",
-    href: "#",
-    desc: "Brand identity for a hospitality concept in Amsterdam — visual language, typography system, and print and digital collateral.",
-    image: "/images/work/kingston-garden/cover.webp",
-    folder: "kingston-garden",
-  },
-  {
-    n: "07",
-    title: "Svatma Yoga",
-    tags: "Branding · Identity · Wellness",
-    year: "2023",
-    href: "#",
-    desc: "Brand identity for a yoga studio in Lleida. Naming, visual system, photography direction and digital collateral.",
-    image: "/images/work/svatma-yoga/cover.jpg",
-    folder: "svatma-yoga",
-  },
-  {
-    n: "08",
-    title: "VMLY&R",
-    tags: "Digital Design · Social · Brand",
-    year: "2022 – 2023",
-    href: "#",
-    desc: "Digital content and social campaigns for Danone, Naturgy, Miravia, Ultima and Cacaolat. Motion, still and interactive formats at scale.",
-    image: undefined as string | undefined,
-    folder: "vmly-r",
-  },
-];
 
 /* Gyreo: nautical chart — concentric rings + rhumb lines */
 function ThumbGyreo() {
@@ -330,10 +250,19 @@ function ThumbVMLYR() {
   );
 }
 
-const THUMBS = [ThumbGyreo, ThumbIlervis, ThumbVeelRun, ThumbAnvie, ThumbWhiteBrig, ThumbKingston, ThumbSvatma, ThumbVMLYR];
+const SLUG_THUMBS: Record<string, React.ComponentType> = {
+  gyreo: ThumbGyreo,
+  ilervis: ThumbIlervis,
+  veelrun: ThumbVeelRun,
+  anvie: ThumbAnvie,
+  "the-white-brig": ThumbWhiteBrig,
+  "kingston-garden": ThumbKingston,
+  "svatma-yoga": ThumbSvatma,
+  "vmly-r": ThumbVMLYR,
+};
 
-function CardThumb({ image, index, title }: { image?: string; index: number; title: string }) {
-  const Thumb = THUMBS[index % THUMBS.length];
+function CardThumb({ image, slug, title }: { image?: string; slug: string; title: string }) {
+  const Thumb = SLUG_THUMBS[slug] ?? ThumbGyreo;
   if (image) {
     return (
       <div className="thumb">
@@ -368,17 +297,17 @@ export default function Work() {
       </div>
       <div className="work-wrap">
         <div className="work" data-layout="grid">
-          {PROJECTS.map((p, i) => (
-            <a className="card" key={p.n} href={p.href} target={p.href !== "#" ? "_blank" : undefined} rel="noopener noreferrer">
-              <CardThumb image={p.image} index={i} title={p.title} />
+          {PROJECTS.map((p) => (
+            <Link className="card" key={p.slug} href={`/work/${p.slug}`}>
+              <CardThumb image={p.image} slug={p.slug} title={p.title} />
               <div className="meta-row">
                 <span className="card-num">{p.n}</span>
                 <span className="card-title-grid">{p.title}</span>
-                <span className="card-year">{p.year}</span>
+                <span className="card-year">{p.meta.year}</span>
               </div>
               <span className="card-tags">{p.tags}</span>
               <p className="card-desc">{p.desc}</p>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
