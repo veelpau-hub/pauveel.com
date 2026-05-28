@@ -1,8 +1,11 @@
 services:
-  - type: static
+  - type: web
     name: pauveel-portfolio
+    runtime: node
     buildCommand: npm ci && npm run build
-    staticPublishPath: ./out
+    startCommand: npm start
     envVars:
+      - key: NODE_ENV
+        value: production
       - key: NODE_VERSION
         value: 20.19.2
