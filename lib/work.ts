@@ -4,6 +4,7 @@ export type Project = {
   title: string;
   tags: string;
   year: string;
+  liveHref?: string;
   externalHref?: string;
   desc: string;
   body: string[];
@@ -19,6 +20,7 @@ export const PROJECTS: Project[] = [
     title: "Gyreo",
     tags: "Dashboard · Maritime · Code",
     year: "2026",
+    liveHref: "https://gyreo.es/",
     externalHref: "https://github.com/veelpau-hub/dashboard_maritimo",
     desc: "Maritime intelligence dashboard for the Bay of Cádiz. Live AIS vessel tracking via WebSocket, 7 hand-drawn D3.js panels (wind rose, Beaufort arc, wave height, solar arc, barometer), Copernicus Sentinel-1 SAR imagery, and tide forecasts from Puertos del Estado. Flask backend on Render.",
     body: [
@@ -26,11 +28,11 @@ export const PROJECTS: Project[] = [
       "The dashboard aggregates live AIS vessel positions via WebSocket, Open-Meteo marine and atmospheric forecasts, Copernicus Sentinel-1 SAR satellite imagery, and tide predictions from Puertos del Estado's Portus API — all refreshed on independent cycles from a single Flask process.",
       "Every widget is hand-drawn in D3.js: wind rose, Beaufort arc, wave height chart, solar arc, barometer. No third-party chart libraries. A Telegram bot monitors for anomalous vessel behaviour and fires alerts directly to your phone.",
     ],
-    image: "/images/work/gyreo/cover.png",
+    image: "/images/work/gyreo/cover.jpg",
     gallery: [
-      "/images/work/gyreo/gallery/screen-01.png",
-      "/images/work/gyreo/gallery/screen-02.png",
-      "/images/work/gyreo/gallery/screen-03.png",
+      "/images/work/gyreo/gallery/screen-01.jpg",
+      "/images/work/gyreo/gallery/screen-02.jpg",
+      "/images/work/gyreo/gallery/screen-03.jpg",
     ],
     meta: {
       type: "Personal project",
@@ -66,13 +68,14 @@ export const PROJECTS: Project[] = [
     title: "VeelRun",
     tags: "Mobile · GPS · PWA",
     year: "2025",
+    liveHref: "https://veelrun.onrender.com/",
     desc: "GPS running tracker built as a PWA — installable on iOS and Android without the App Store. Live bearing to home, pace, split stats and distance. Dark minimal UI built for one hand. Live on Render.",
     body: [
       "A GPS running tracker that runs entirely in the browser — no app store, no installation friction. Built as a Progressive Web App with a Service Worker for offline capability and home screen installation on both iOS and Android.",
       "The core feature is a live compass bearing back to your start point, which makes it useful for out-and-back runs in unfamiliar terrain. The UI is designed for dark conditions and one-handed use: large touch targets, high contrast and no distracting chrome.",
       "Stats tracked in real time: distance, pace, average pace, elapsed time, and per-kilometre splits. All processing happens on-device — no data sent anywhere.",
     ],
-    image: "/images/work/veelrun/cover.png",
+    image: "/images/work/veelrun/cover.jpg",
     gallery: [],
     meta: {
       type: "Personal project",

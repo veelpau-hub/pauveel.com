@@ -77,10 +77,19 @@ export default async function WorkDetail(
             {project.body.map((para, i) => (
               <p key={i}>{para}</p>
             ))}
-            {project.externalHref && (
-              <a href={project.externalHref} target="_blank" rel="noopener noreferrer" className="contact email" style={{ display: "inline-flex", marginTop: 24, fontSize: 14 }}>
-                View on GitHub <span className="arr">↗</span>
-              </a>
+            {(project.liveHref || project.externalHref) && (
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 24 }}>
+                {project.liveHref && (
+                  <a href={project.liveHref} target="_blank" rel="noopener noreferrer" className="contact email" style={{ display: "inline-flex", fontSize: 14 }}>
+                    View Live <span className="arr">↗</span>
+                  </a>
+                )}
+                {project.externalHref && (
+                  <a href={project.externalHref} target="_blank" rel="noopener noreferrer" className="contact email" style={{ display: "inline-flex", fontSize: 14 }}>
+                    View on GitHub <span className="arr">↗</span>
+                  </a>
+                )}
+              </div>
             )}
           </div>
         </div>

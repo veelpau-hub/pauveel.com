@@ -26,9 +26,9 @@ const APPS = [
     tags: "Dashboard · Flask · D3.js · Mapbox",
     year: "2026",
     status: "live" as const,
-    href: "https://github.com/veelpau-hub/dashboard_maritimo",
+    href: "https://gyreo.es/",
     desc: "Maritime intelligence dashboard built with Claude from the ground up. Flask backend, 7 hand-drawn D3.js weather panels, Mapbox GL JS, AIS WebSocket stream, Sentinel-1 SAR imagery pipeline with NumPy and Pillow, and a Telegram alert bot for anomalous vessel behaviour — all in a single Python process.",
-    image: "/images/ai-apps/gyreo/cover.png",
+    image: "/images/ai-apps/gyreo/cover.jpg",
   },
   {
     n: "03",
@@ -36,9 +36,9 @@ const APPS = [
     tags: "PWA · Geolocation · Service Worker",
     year: "2025",
     status: "live" as const,
-    href: "#",
+    href: "https://veelrun.onrender.com/",
     desc: "GPS running tracker built as a PWA in a single session with Claude. Service Worker, Geolocation API, live compass bearing calculations, pace and split timing — from zero to deployed on Render in a few hours.",
-    image: "/images/ai-apps/veelrun/cover.png",
+    image: "/images/ai-apps/veelrun/cover.jpg",
   },
   {
     n: "04",
