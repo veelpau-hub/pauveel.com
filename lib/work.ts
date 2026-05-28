@@ -22,9 +22,9 @@ export const PROJECTS: Project[] = [
     year: "2026",
     liveHref: "https://gyreo.es/",
     externalHref: "https://github.com/veelpau-hub/dashboard_maritimo",
-    desc: "Maritime intelligence dashboard for the Bay of Cádiz. Live AIS vessel tracking via WebSocket, 7 hand-drawn D3.js panels (wind rose, Beaufort arc, wave height, solar arc, barometer), Copernicus Sentinel-1 SAR imagery, and tide forecasts from Puertos del Estado. Flask backend on Render.",
+    desc: "Maritime intelligence dashboard. Live AIS vessel tracking via WebSocket, 7 hand-drawn D3.js panels (wind rose, Beaufort arc, wave height, solar arc, barometer), Copernicus Sentinel-1 SAR imagery, and tide forecasts from Puertos del Estado. Flask backend on Render.",
     body: [
-      "Built as a personal tool for sailors and maritime professionals in the Bay of Cádiz — a region with complex tidal patterns, heavy traffic and weather that changes faster than any standard app conveys.",
+      "Built as a personal tool for sailors and maritime professionals — a region with complex tidal patterns, heavy traffic and weather that changes faster than any standard app conveys.",
       "The dashboard aggregates live AIS vessel positions via WebSocket, Open-Meteo marine and atmospheric forecasts, Copernicus Sentinel-1 SAR satellite imagery, and tide predictions from Puertos del Estado's Portus API — all refreshed on independent cycles from a single Flask process.",
       "Every widget is hand-drawn in D3.js: wind rose, Beaufort arc, wave height chart, solar arc, barometer. No third-party chart libraries. A Telegram bot monitors for anomalous vessel behaviour and fires alerts directly to your phone.",
     ],
@@ -105,9 +105,6 @@ export const PROJECTS: Project[] = [
       "/images/work/anvie/gallery/XY4qkeipgQWbahSn6rFxKZ22Tck.webp",
       "/images/work/anvie/gallery/6CaQr97hP9OPQyryXbKds7f9lfU.webp",
       "/images/work/anvie/gallery/G7PEQTAEZobgVpzbwJVDbeIjhg.webp",
-      "/images/work/anvie/gallery/hMqwspPv30Lh2NUkXwEY9jAX8Ys.webp",
-      "/images/work/anvie/gallery/ovG14bEXgjPJw1gKvnmBOqx3vc.avif",
-      "/images/work/anvie/gallery/umcvkz7ix1WOgRU5haPAIzKXA.webp",
     ],
     meta: {
       type: "Creative studio",

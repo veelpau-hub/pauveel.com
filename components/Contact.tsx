@@ -20,10 +20,10 @@ export default function Contact() {
 
         <a
           className="email"
-          href="mailto:hi@pauveel.com"
-          aria-label="Send an email to hi@pauveel.com"
+          href="mailto:veelpau@gmail.com"
+          aria-label="Send an email to veelpau@gmail.com"
         >
-          hi@pauveel.com
+          veelpau@gmail.com
           <span className="arr">↗</span>
         </a>
 
