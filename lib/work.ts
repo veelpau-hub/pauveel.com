@@ -70,6 +70,7 @@ export const PROJECTS: Project[] = [
     tags: "Mobile · GPS · PWA",
     year: "2025",
     liveHref: "https://veelrun.onrender.com/",
+    imagePosition: "top",
     desc: "GPS running tracker built as a PWA — installable on iOS and Android without the App Store. Live bearing to home, pace, split stats and distance. Dark minimal UI built for one hand. Live on Render.",
     body: [
       "A GPS running tracker that runs entirely in the browser — no app store, no installation friction. Built as a Progressive Web App with a Service Worker for offline capability and home screen installation on both iOS and Android.",
@@ -77,7 +78,9 @@ export const PROJECTS: Project[] = [
       "Stats tracked in real time: distance, pace, average pace, elapsed time, and per-kilometre splits. All processing happens on-device — no data sent anywhere.",
     ],
     image: "/images/work/veelrun/cover.jpg",
-    gallery: [],
+    gallery: [
+      "/images/work/veelrun/gallery/screen-01.jpg",
+    ],
     meta: {
       type: "Personal project",
       year: "2025",
