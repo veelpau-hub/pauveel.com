@@ -4,6 +4,7 @@ const SKILLS = [
   ["03", "Data & Geo",         "Mapbox GL JS · Python · Flask · Data Viz · APIs"],
   ["04", "Brand & Motion",     "Adobe Suite · Illustrator · After Effects · Motion"],
   ["05", "Product & Platform", "App Store · Google Play · Reskyt · Docker · Node.js"],
+  ["06", "Languages",          "Catalan (Native) · Spanish (Native) · English (C1)"],
 ] as const;
 
 export default function About() {
@@ -29,8 +30,8 @@ export default function About() {
           <p>
             <strong>Pau Vidal</strong> is a UX/UI designer and front-end
             developer based in Lleida, Cataluña. Trained in graphic design at
-            the UOC, sharpened by years of shipping mobile apps and technical
-            interfaces.
+            the UOC, currently completing an MBA — sharpened by years of
+            shipping mobile apps and technical interfaces.
           </p>
           <p>
             At <strong>Reskyt</strong> he designs and builds mobile apps for

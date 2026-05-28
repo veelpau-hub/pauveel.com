@@ -4,7 +4,7 @@ const NAV = [
   ["03", "About", "#about"],
   ["04", "Case Study", "#case"],
   ["05", "Contact", "#contact"],
-  ["—", "Colophon", "#colophon"],
+  ["↗", "AI Apps", "/ai-apps"],
 ] as const;
 
 export default function IndexStrip() {

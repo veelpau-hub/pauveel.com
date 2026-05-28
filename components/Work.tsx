@@ -23,6 +23,30 @@ const PROJECTS = [
     href: "#",
     desc: "Real-time GPS running tracker installable as a PWA. Live compass bearing to home, distance, pace, and split stats — minimal dark UI built for one hand.",
   },
+  {
+    n: "04",
+    title: "Anvie",
+    tags: "Branding · Identity · Studio",
+    year: "2022 – present",
+    href: "#",
+    desc: "Personal creative studio defining brand identity for early-stage companies — naming, visual language, motion and web.",
+  },
+  {
+    n: "05",
+    title: "VMLY&R",
+    tags: "Digital Design · Social · Brand",
+    year: "2022 – 2023",
+    href: "#",
+    desc: "Digital content and social campaigns for Danone, Naturgy, Miravia, Ultima and Cacaolat. Motion, still and interactive formats at scale.",
+  },
+  {
+    n: "06",
+    title: "Kingston Garden",
+    tags: "Branding · Identity · Print",
+    year: "2022",
+    href: "#",
+    desc: "Brand identity for a hospitality concept in Amsterdam — visual language, typography system, and print and digital collateral.",
+  },
 ];
 
 function rng(seed: number, n: number) {
@@ -137,7 +161,107 @@ function ThumbVeelRun() {
   );
 }
 
-const THUMBS = [ThumbGyreo, ThumbIlervis, ThumbVeelRun];
+/* Anvie: identity grid — logotype construction lines */
+function ThumbAnvie() {
+  return (
+    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="ta" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="currentColor" stopOpacity=".05" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="300" fill="url(#ta)" />
+      {/* baseline grid */}
+      {[60, 120, 180, 240].map((y) => (
+        <line key={y} x1="40" y1={y} x2="360" y2={y} stroke="currentColor" strokeOpacity=".07" strokeWidth=".5" />
+      ))}
+      {/* diamond mark */}
+      <polygon points="200,80 260,150 200,220 140,150" fill="none" stroke="currentColor" strokeOpacity=".2" strokeWidth=".75" />
+      <polygon points="200,108 236,150 200,192 164,150" fill="none" stroke="currentColor" strokeOpacity=".12" strokeWidth=".5" />
+      <circle cx="200" cy="150" r="6" fill="currentColor" fillOpacity=".15" />
+      <circle cx="200" cy="150" r="2" fill="currentColor" fillOpacity=".4" />
+      {/* corner marks */}
+      {[[140,150],[200,80],[260,150],[200,220]].map(([x,y],i) => (
+        <circle key={i} cx={x} cy={y} r="2.5" fill="none" stroke="currentColor" strokeOpacity=".2" strokeWidth=".75" />
+      ))}
+      {/* wordmark skeleton */}
+      <line x1="100" y1="258" x2="300" y2="258" stroke="currentColor" strokeOpacity=".1" strokeWidth=".5" />
+    </svg>
+  );
+}
+
+/* VMLY&R: social content grid — cards and media blocks */
+function ThumbVMLYR() {
+  const cards = [
+    [40, 40, 148, 130],
+    [212, 40, 148, 60],
+    [212, 110, 68, 60],
+    [290, 110, 70, 60],
+    [40, 182, 68, 78],
+    [118, 182, 82, 78],
+    [212, 182, 148, 78],
+  ] as [number, number, number, number][];
+  return (
+    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="tv" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="currentColor" stopOpacity=".06" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="300" fill="url(#tv)" />
+      {cards.map(([x, y, w, h], i) => (
+        <rect key={i} x={x} y={y} width={w} height={h} rx="3"
+          fill="currentColor" fillOpacity={i === 0 ? ".08" : ".04"}
+          stroke="currentColor" strokeOpacity=".12" strokeWidth=".5" />
+      ))}
+      {/* image placeholder on first card */}
+      <line x1="40" y1="40" x2="188" y2="170" stroke="currentColor" strokeOpacity=".05" strokeWidth=".5" />
+      <line x1="188" y1="40" x2="40" y2="170" stroke="currentColor" strokeOpacity=".05" strokeWidth=".5" />
+      {/* text lines */}
+      {[220, 232, 244].map((y) => (
+        <line key={y} x1="220" y1={y} x2={y === 220 ? 340 : 300} y2={y} stroke="currentColor" strokeOpacity=".15" strokeWidth=".75" />
+      ))}
+    </svg>
+  );
+}
+
+/* Kingston Garden: organic botanical — circles and curves */
+function ThumbKingston() {
+  return (
+    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="tk" x1="0" y1="1" x2="1" y2="0">
+          <stop offset="0" stopColor="currentColor" stopOpacity=".04" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="300" fill="url(#tk)" />
+      {/* outer wreath circles */}
+      <circle cx="200" cy="150" r="100" fill="none" stroke="currentColor" strokeOpacity=".1" strokeWidth=".5" />
+      <circle cx="200" cy="150" r="76"  fill="none" stroke="currentColor" strokeOpacity=".08" strokeWidth=".5" />
+      {/* leaf arcs */}
+      {Array.from({length: 8}).map((_, i) => {
+        const a = (i * 45 * Math.PI) / 180;
+        const x1 = 200 + Math.cos(a) * 76;
+        const y1 = 150 + Math.sin(a) * 76;
+        const x2 = 200 + Math.cos(a) * 100;
+        const y2 = 150 + Math.sin(a) * 100;
+        const mx = 200 + Math.cos(a + 0.3) * 90;
+        const my = 150 + Math.sin(a + 0.3) * 90;
+        return <path key={i} d={`M ${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`} fill="none" stroke="currentColor" strokeOpacity=".14" strokeWidth=".75" />;
+      })}
+      {/* monogram centre */}
+      <circle cx="200" cy="150" r="28" fill="none" stroke="currentColor" strokeOpacity=".12" strokeWidth=".5" />
+      <circle cx="200" cy="150" r="3"  fill="currentColor" fillOpacity=".3" />
+      {/* baseline */}
+      <line x1="100" y1="265" x2="300" y2="265" stroke="currentColor" strokeOpacity=".08" strokeWidth=".5" />
+    </svg>
+  );
+}
+
+const THUMBS = [ThumbGyreo, ThumbIlervis, ThumbVeelRun, ThumbAnvie, ThumbVMLYR, ThumbKingston];
 
 function PlaceholderThumb({ index }: { index: number }) {
   const Thumb = THUMBS[index % THUMBS.length];
@@ -163,7 +287,7 @@ export default function Work() {
         <span className="meta">
           Built end to end, shipped.
           <br />
-          {PROJECTS.length} projects · 2025—2026
+          {PROJECTS.length} projects · 2022—2026
         </span>
       </div>
       <div className="work-wrap">

@@ -1,6 +1,6 @@
 const SOCIALS = [
   { label: "LinkedIn",  href: "https://linkedin.com/in/pauveel" },
-  { label: "GitHub",    href: "#" },
+  { label: "GitHub",    href: "https://github.com/veelpau-hub" },
   { label: "Instagram", href: "#" },
   { label: "Are.na",    href: "#" },
   { label: "Read.cv",   href: "#" },
