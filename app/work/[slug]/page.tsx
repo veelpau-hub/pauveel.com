@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import TopBar from "@/components/TopBar";
+import Gallery from "@/components/Gallery";
 import { getProject, PROJECTS } from "@/lib/work";
 
 export function generateStaticParams() {
@@ -97,13 +98,7 @@ export default async function WorkDetail(
         {/* ── Gallery ── */}
         {project.gallery.length > 0 && (
           <div style={{ padding: "64px var(--gutter) 0" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 420px), 1fr))", gap: 12 }}>
-              {project.gallery.map((src, i) => (
-                <div key={i} style={{ position: "relative", aspectRatio: "4/3", borderRadius: 4, overflow: "hidden", border: "1px solid var(--rule)", background: "var(--panel)" }}>
-                  <Image src={src} alt={`${project.title} — ${i + 1}`} fill sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: "cover" }} />
-                </div>
-              ))}
-            </div>
+            <Gallery images={project.gallery} title={project.title} />
           </div>
         )}
 
