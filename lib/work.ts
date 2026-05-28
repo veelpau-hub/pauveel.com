@@ -31,9 +31,7 @@ export const PROJECTS: Project[] = [
     ],
     image: "/images/work/gyreo/cover.jpg",
     gallery: [
-      "/images/work/gyreo/gallery/screen-01.jpg",
-      "/images/work/gyreo/gallery/screen-02.jpg",
-      "/images/work/gyreo/gallery/screen-03.jpg",
+      "/images/work/gyreo/cover.jpg",
     ],
     meta: {
       type: "Personal project",
@@ -42,27 +40,7 @@ export const PROJECTS: Project[] = [
       stack: "Python · Flask · D3.js · Mapbox GL JS · Render",
     },
   },
-  {
-    slug: "ilervis",
-    n: "02",
-    title: "Ilervis",
-    tags: "Product · IoT · Science",
-    year: "2025",
-    desc: "Multi-module scientific platform: ESP32 weather stations feeding live D3.js dashboards, photogrammetry pipeline, Mars HiRISE imagery processing, and ADS-B aircraft tracking.",
-    body: [
-      "Ilervis is a personal scientific platform built in modules, each solving a different data problem. The name references Ilerda, the Roman name for Lleida.",
-      "The weather module networks ESP32 microcontrollers as remote sensing stations. Each node transmits temperature, humidity, pressure and UV index over Wi-Fi to a central Flask backend where D3.js renders live dashboards.",
-      "The photogrammetry pipeline processes drone imagery into 3D point clouds. The planetary module downloads and classifies Mars HiRISE high-resolution imagery from the NASA PDS archive. The aviation module decodes ADS-B transponder data to track aircraft positions in real time.",
-    ],
-    image: undefined,
-    gallery: [],
-    meta: {
-      type: "Personal project",
-      year: "2025",
-      role: "Design · Development · Research",
-      stack: "ESP32 · Python · D3.js · Flask · Arduino",
-    },
-  },
+ 
   {
     slug: "veelrun",
     n: "03",
@@ -79,7 +57,7 @@ export const PROJECTS: Project[] = [
     ],
     image: "/images/work/veelrun/cover.jpg",
     gallery: [
-      "/images/work/veelrun/gallery/screen-01.jpg",
+      "/images/work/veelrun/cover.jpg",
     ],
     meta: {
       type: "Personal project",
@@ -206,27 +184,7 @@ export const PROJECTS: Project[] = [
       stack: "Figma · Adobe Suite",
     },
   },
-  {
-    slug: "vmly-r",
-    n: "08",
-    title: "VMLY&R",
-    tags: "Digital Design · Social · Brand",
-    year: "2022 – 2023",
-    desc: "Digital content and social campaigns for Danone, Naturgy, Miravia, Ultima and Cacaolat. Motion, still and interactive formats at scale.",
-    body: [
-      "Digital content and social campaigns for major Spanish and international brands at VMLY&R, one of the world's largest marketing agencies.",
-      "Brands included Danone, Naturgy, Miravia, Ultima and Cacaolat. Work spanned the full content spectrum: motion graphics, static social assets, interactive formats and campaign systems designed for high-volume production.",
-      "The role demanded both design precision and the ability to work at pace — producing consistent work across multiple brand guidelines simultaneously.",
-    ],
-    image: undefined,
-    gallery: [],
-    meta: {
-      type: "Agency",
-      year: "2022 – 2023",
-      role: "Digital Designer",
-      stack: "Adobe Suite · After Effects · Figma",
-    },
-  },
+
 ];
 
 export function getProject(slug: string): Project | undefined {
