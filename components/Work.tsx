@@ -261,12 +261,12 @@ const SLUG_THUMBS: Record<string, React.ComponentType> = {
   "vmly-r": ThumbVMLYR,
 };
 
-function CardThumb({ image, slug, title }: { image?: string; slug: string; title: string }) {
+function CardThumb({ image, slug, title, imagePosition }: { image?: string; slug: string; title: string; imagePosition?: string }) {
   const Thumb = SLUG_THUMBS[slug] ?? ThumbGyreo;
   if (image) {
     return (
       <div className="thumb">
-        <Image src={image} alt={title} fill sizes="(max-width: 900px) 100vw, 60vw" style={{ objectFit: "cover" }} />
+        <Image src={image} alt={title} fill sizes="(max-width: 900px) 100vw, 60vw" style={{ objectFit: "cover", objectPosition: imagePosition ?? "center" }} />
       </div>
     );
   }
@@ -299,7 +299,7 @@ export default function Work() {
         <div className="work" data-layout="grid">
           {PROJECTS.map((p) => (
             <Link className="card" key={p.slug} href={`/work/${p.slug}`}>
-              <CardThumb image={p.image} slug={p.slug} title={p.title} />
+              <CardThumb image={p.image} slug={p.slug} title={p.title} imagePosition={p.imagePosition} />
               <div className="meta-row">
                 <span className="card-num">{p.n}</span>
                 <span className="card-title-grid">{p.title}</span>

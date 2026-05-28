@@ -9,6 +9,7 @@ export type Project = {
   desc: string;
   body: string[];
   image?: string;
+  imagePosition?: string;
   gallery: string[];
   meta: { type: string; year: string; role: string; stack: string };
 };
@@ -96,7 +97,8 @@ export const PROJECTS: Project[] = [
       "Work covers the full scope of early-stage brand: naming, visual identity, motion and web presence. The studio has produced identity systems, editorial projects and brand launches since 2022.",
       "Each project starts from a strategic brief — understanding the audience, the positioning and the longevity required — before touching Figma.",
     ],
-    image: "/images/work/anvie/cover.webp",
+    image: "/images/work/anvie/cover.avif",
+    imagePosition: "top",
     gallery: [
       "/images/work/anvie/gallery/1lYpOWxJrGVc92yhepSQgjNsZI.webp",
       "/images/work/anvie/gallery/NKY1yNCFBfuJxJ2kFMQHWQ72xc.webp",
@@ -105,6 +107,11 @@ export const PROJECTS: Project[] = [
       "/images/work/anvie/gallery/XY4qkeipgQWbahSn6rFxKZ22Tck.webp",
       "/images/work/anvie/gallery/6CaQr97hP9OPQyryXbKds7f9lfU.webp",
       "/images/work/anvie/gallery/G7PEQTAEZobgVpzbwJVDbeIjhg.webp",
+      "/images/work/anvie/gallery/iLRxYuV0kpAsX7GbMKpURD7bUX4.avif",
+      "/images/work/anvie/gallery/bowsyY6Y9HaMy4BpCoARv0og4ec.avif",
+      "/images/work/anvie/gallery/I1pfwj3ydGZsTuHoQXEEaekJQw.avif",
+      "/images/work/anvie/gallery/LDZ7XYmtxLbhjXb7hx9ADQzRPh4.avif",
+      "/images/work/anvie/gallery/V2AJaXg4RiTEzZTEI2ijZkOAA2I.webp",
     ],
     meta: {
       type: "Creative studio",

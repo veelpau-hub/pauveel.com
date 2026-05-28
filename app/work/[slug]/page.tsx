@@ -50,7 +50,7 @@ export default async function WorkDetail(
         <div style={{ padding: "48px var(--gutter) 0" }}>
           {project.image ? (
             <div style={{ position: "relative", width: "100%", aspectRatio: "16/8", borderRadius: 4, overflow: "hidden", border: "1px solid var(--rule)", background: "var(--panel)" }}>
-              <Image src={project.image} alt={project.title} fill sizes="100vw" style={{ objectFit: "cover" }} priority />
+              <Image src={project.image} alt={project.title} fill sizes="100vw" style={{ objectFit: "cover", objectPosition: project.imagePosition ?? "center" }} priority />
             </div>
           ) : (
             <div style={{ width: "100%", aspectRatio: "16/8", background: "var(--panel)", border: "1px solid var(--rule)", borderRadius: 4, display: "flex", alignItems: "center", justifyContent: "center" }}>
