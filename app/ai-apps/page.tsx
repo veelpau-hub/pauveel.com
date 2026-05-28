@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import TopBar from "@/components/TopBar";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "AI Apps — Pau Vidal",
@@ -17,6 +18,8 @@ const APPS = [
     status: "live" as const,
     href: "/",
     desc: "This portfolio. Designed in Figma, coded from scratch in Next.js with Claude as the primary coding partner. No templates, no page builders.",
+    image: undefined as string | undefined,
+    folder: "pauveel-com",
   },
   {
     n: "02",
@@ -26,6 +29,8 @@ const APPS = [
     status: "wip" as const,
     href: "#",
     desc: "Second iteration of a personal productivity tool. Architecture and component logic co-designed with AI.",
+    image: undefined as string | undefined,
+    folder: "homerun",
   },
   {
     n: "03",
@@ -35,6 +40,8 @@ const APPS = [
     status: "soon" as const,
     href: "#",
     desc: "",
+    image: undefined as string | undefined,
+    folder: "",
   },
 ];
 
@@ -192,9 +199,13 @@ export default function AIApps() {
                 style={app.status === "soon" ? { pointerEvents: "none", opacity: 0.35 } : undefined}
               >
                 <div className="thumb" style={app.status === "soon" ? { borderStyle: "dashed" } : undefined}>
-                  <div className="thumb-placeholder">
-                    <ChipThumb index={i} />
-                  </div>
+                  {app.image ? (
+                    <Image src={app.image} alt={app.title} fill sizes="(max-width: 900px) 100vw, 60vw" style={{ objectFit: "cover" }} />
+                  ) : (
+                    <div className="thumb-placeholder">
+                      <ChipThumb index={i} />
+                    </div>
+                  )}
                 </div>
                 <div className="meta-row">
                   <span className="card-num">{app.n}</span>

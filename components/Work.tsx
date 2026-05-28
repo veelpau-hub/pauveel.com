@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const PROJECTS = [
   {
     n: "01",
@@ -6,6 +8,8 @@ const PROJECTS = [
     year: "2026",
     href: "https://github.com/veelpau-hub/dashboard_maritimo",
     desc: "Maritime intelligence dashboard for the Bay of Cádiz — AIS vessel tracking, live weather layers, SAR Sentinel-1 satellite imagery, and tide predictions.",
+    image: undefined as string | undefined,
+    folder: "gyreo",
   },
   {
     n: "02",
@@ -14,6 +18,8 @@ const PROJECTS = [
     year: "2025",
     href: "#",
     desc: "Multi-module scientific platform: ESP32 weather stations with D3.js dashboards, photogrammetry pipeline, Mars HiRISE imagery processing, and ADS-B aircraft tracking.",
+    image: undefined as string | undefined,
+    folder: "ilervis",
   },
   {
     n: "03",
@@ -22,6 +28,8 @@ const PROJECTS = [
     year: "2025",
     href: "#",
     desc: "Real-time GPS running tracker installable as a PWA. Live compass bearing to home, distance, pace, and split stats — minimal dark UI built for one hand.",
+    image: undefined as string | undefined,
+    folder: "veelrun",
   },
   {
     n: "04",
@@ -30,6 +38,8 @@ const PROJECTS = [
     year: "2022 – present",
     href: "#",
     desc: "Personal creative studio defining brand identity for early-stage companies — naming, visual language, motion and web.",
+    image: undefined as string | undefined,
+    folder: "anvie",
   },
   {
     n: "05",
@@ -38,6 +48,8 @@ const PROJECTS = [
     year: "2022 – 2023",
     href: "#",
     desc: "Digital content and social campaigns for Danone, Naturgy, Miravia, Ultima and Cacaolat. Motion, still and interactive formats at scale.",
+    image: undefined as string | undefined,
+    folder: "vmly-r",
   },
   {
     n: "06",
@@ -46,6 +58,8 @@ const PROJECTS = [
     year: "2022",
     href: "#",
     desc: "Brand identity for a hospitality concept in Amsterdam — visual language, typography system, and print and digital collateral.",
+    image: undefined as string | undefined,
+    folder: "kingston-garden",
   },
 ];
 
@@ -263,8 +277,15 @@ function ThumbKingston() {
 
 const THUMBS = [ThumbGyreo, ThumbIlervis, ThumbVeelRun, ThumbAnvie, ThumbVMLYR, ThumbKingston];
 
-function PlaceholderThumb({ index }: { index: number }) {
+function CardThumb({ image, index, title }: { image?: string; index: number; title: string }) {
   const Thumb = THUMBS[index % THUMBS.length];
+  if (image) {
+    return (
+      <div className="thumb">
+        <Image src={image} alt={title} fill sizes="(max-width: 900px) 100vw, 60vw" style={{ objectFit: "cover" }} />
+      </div>
+    );
+  }
   return (
     <div className="thumb">
       <div className="thumb-placeholder">
@@ -294,7 +315,7 @@ export default function Work() {
         <div className="work" data-layout="grid">
           {PROJECTS.map((p, i) => (
             <a className="card" key={p.n} href={p.href} target={p.href !== "#" ? "_blank" : undefined} rel="noopener noreferrer">
-              <PlaceholderThumb index={i} />
+              <CardThumb image={p.image} index={i} title={p.title} />
               <div className="meta-row">
                 <span className="card-num">{p.n}</span>
                 <span className="card-title-grid">{p.title}</span>
