@@ -232,6 +232,7 @@ body::before {
 .card .card-num { font-family: var(--ff-mono); font-size: 10px; color: var(--ink-mute); letter-spacing: .08em; }
 .card .card-title-grid { font-family: var(--ff-display); font-variation-settings: "wdth" 88; font-weight: 600; font-size: 22px; letter-spacing: -.01em; color: var(--ink); line-height: 1.1; }
 .card .card-tags { font-family: var(--ff-mono); font-size: 10px; color: var(--ink-dim); letter-spacing: .06em; text-transform: uppercase; margin-top: 6px; padding-left: 26px; display: block; }
+.card .card-desc { font-family: var(--ff-sans); font-size: 13px; color: var(--ink-dim); line-height: 1.5; margin: 8px 0 0; padding-left: 26px; max-width: 52ch; }
 .card .card-year { font-family: var(--ff-mono); font-size: 10px; color: var(--ink-mute); letter-spacing: .08em; }
 
 .thumb-placeholder {
